@@ -2,11 +2,11 @@ import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
 import Listarticles from "./components/admin/articles/Listarticles";
 import Listcategories from "./components/admin/categories/Listcategories";
 import Listscategories from "./components/admin/scategories/Listscategories";
-import Menu from "./components/admin/Menu";
+/*import Menu from "./components/admin/Menu";*/
 import Listarticlescard from "./components/client/Listarticlescard";
 import Cart from "./components/client/panier/Cart";
 import NavScrolls from "./components/client/Navscrolls";
-import SuccessPayment from './components/client/Successpayment'
+import Successpayment from "./components/client/panier/Successpayment";
 
 function App() {
  
@@ -21,7 +21,7 @@ function App() {
 <Route path='/cart' element={<Cart/>}/>
 <Route path="/categories"  element={<Listcategories/>}/>
 <Route path="/scategories"  element={<Listscategories/>}/>
-<Route path="/successPayment" element={<SuccessPayment/>}/>
+<Route path="/successPayment" element={<Successpayment/>}/>
 </Routes>
 </Router>
     </>
