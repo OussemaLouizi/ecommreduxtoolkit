@@ -6,6 +6,7 @@ import Menu from "./components/admin/Menu";
 import Listarticlescard from "./components/client/Listarticlescard";
 import Cart from "./components/client/panier/Cart";
 import NavScrolls from "./components/client/Navscrolls";
+import SuccessPayment from './components/client/Successpayment'
 
 function App() {
  
@@ -20,6 +21,7 @@ function App() {
 <Route path='/cart' element={<Cart/>}/>
 <Route path="/categories"  element={<Listcategories/>}/>
 <Route path="/scategories"  element={<Listscategories/>}/>
+<Route path="/successPayment" element={<SuccessPayment/>}/>
 </Routes>
 </Router>
     </>
