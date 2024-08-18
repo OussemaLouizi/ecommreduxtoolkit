@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import {setPage, setLimit, setSearchTerm, getArticlesPagination} from "../../../features/articleSlice";
-import "../../../style.css"
-import Affichearticle from './Affichearticle';
-import Pagination from './Pagination';
-const Listarticles = () => {
+import {setPage, setLimit, setSearchTerm, getArticlesPagination} from "../../features/articleSlice";
+import "../../components/admin/articles/style.css"
+import Pagination from '../../components/admin/articles/Pagination';
+import Affichearticlecard from './Affichearticlecard';
+const Listarticlescard = () => {
 let {page,limit,tot,searchTerm} = useSelector((state)=>state.storearticles);
 const getProducts=async()=>{
 await dispatch(getArticlesPagination())
@@ -20,7 +20,7 @@ const handleLimitChange = (event) => {
 return (
 <div>
 
-<Affichearticle/>
+<Affichearticlecard/>
 <div style={{ "display": "flex", "justifyContent": "right"}}>
 <div className="limit-selector-container">
 
@@ -42,4 +42,4 @@ onChange={(event) => {handleLimitChange(event)}}
 </div>
 )
 }
-export default Listarticles
+export default Listarticlescard
